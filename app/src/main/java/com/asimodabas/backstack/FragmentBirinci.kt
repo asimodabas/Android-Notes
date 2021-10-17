@@ -14,7 +14,7 @@ class FragmentBirinci : Fragment() {
 
         val rootView = inflater.inflate(R.layout.fragmentbirinci,container,false)
         rootView.buttonTikla.setOnClickListener {
-            Toast.makeText(activity, "Tılandı", Toast.LENGTH_SHORT).show()
+            Toast.makeText(activity, "Tıklandı", Toast.LENGTH_SHORT).show()
 
         }
         return rootView

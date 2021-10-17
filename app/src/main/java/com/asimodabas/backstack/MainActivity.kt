@@ -11,14 +11,17 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
+
+        val fm = supportFragmentManager
+        val ft = fm.beginTransaction()
+        ft.add(R.id.fragment_tutucu,FragmentBirinci())
+        ft.commit()
+
         goToB.setOnClickListener {
             startActivity(Intent(this@MainActivity,ActivityB::class.java))
             Toast.makeText(this,"B'ye geçildi", Toast.LENGTH_SHORT).show()
 
-        val fm = supportFragmentManager
-            val ft = fm.beginTransaction()
-            ft.add(R.id.fragment_tutucu,FragmentBirinci())
-            ft.commit()
+
 
         }
 
