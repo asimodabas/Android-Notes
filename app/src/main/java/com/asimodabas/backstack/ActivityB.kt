@@ -14,6 +14,9 @@ class ActivityB : AppCompatActivity() {
     goToC.setOnClickListener {
         startActivity(Intent(this@ActivityB,ActivityC::class.java))
 
+        val girilen=editTextGirilen.text.toString()
+        textViewAlınan.text = girilen.toString()
+
     }
     }
 }
