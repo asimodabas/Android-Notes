@@ -11,10 +11,9 @@ class ActivityB : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_b)
 
+    goToC.setOnClickListener {
+        startActivity(Intent(this@ActivityB,ActivityC::class.java))
 
-        goToC.setOnClickListener {
-            startActivity(Intent(this@ActivityB,ActivityC::class.java))
-
-        }
+    }
     }
 }

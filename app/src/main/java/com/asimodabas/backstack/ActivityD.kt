@@ -12,7 +12,7 @@ class ActivityD : AppCompatActivity() {
     }
 
     override fun onBackPressed() {
-        val intent = Intent(this@ActivityD,ActivityB::class.java)
+        val intent = Intent(this@ActivityD,MainActivity::class.java)
 
         intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP)
         startActivity(intent)
