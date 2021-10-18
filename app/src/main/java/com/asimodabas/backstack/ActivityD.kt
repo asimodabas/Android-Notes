@@ -11,6 +11,13 @@ class ActivityD : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_d)
 
+        fun onBackPressed() {
+            val intent = Intent(this@ActivityD, MainActivity::class.java)
+            intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP)
+            startActivity(intent)
+
+        }
+
         buttonSecim.setOnClickListener {
 
             val barcelonaDurum = radioButtonBarcelona.isChecked
@@ -20,28 +27,24 @@ class ActivityD : AppCompatActivity() {
 
             var x = ""
 
-            if (barcelonaDurum){
-                x += "\n" +"Barcelona secildi."
+            if (barcelonaDurum) {
+                x += "\n" + "Barcelona secildi."
             }
-            if (galatasarayDurum){
-                x += "\n" +"Galatasaray secildi."
+            if (galatasarayDurum) {
+                x += "\n" + "Galatasaray secildi."
             }
-            if (JavaDurum){
-                x += "\n" +"Java secildi."
+            if (JavaDurum) {
+                x += "\n" + "Java secildi."
             }
-            if (kotlinDurum){
-                x += "\n" +"Kotlin secildi."
+            if (kotlinDurum) {
+                x += "\n" + "Kotlin secildi."
             }
 
-            textView8.text=x
-
-        }
-    fun onBackPressed() {
-        val intent = Intent(this@ActivityD,MainActivity::class.java)
-        intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP)
-        startActivity(intent)
+            textView8.text = x
 
         }
+
 
     }
+
 }

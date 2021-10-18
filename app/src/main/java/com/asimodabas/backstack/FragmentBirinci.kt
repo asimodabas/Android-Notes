@@ -12,7 +12,7 @@ class FragmentBirinci : Fragment() {
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
 
-        val rootView = inflater.inflate(R.layout.fragmentbirinci,container,false)
+        val rootView = inflater.inflate(R.layout.fragmentbirinci, container, false)
         rootView.buttonTikla.setOnClickListener {
             Toast.makeText(activity, "Tıklandı", Toast.LENGTH_SHORT).show()
 

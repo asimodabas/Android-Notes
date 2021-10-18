@@ -14,13 +14,12 @@ class MainActivity : AppCompatActivity() {
 
         val fm = supportFragmentManager
         val ft = fm.beginTransaction()
-        ft.add(R.id.fragment_tutucu,FragmentBirinci())
+        ft.add(R.id.fragment_tutucu, FragmentBirinci())
         ft.commit()
 
         goToB.setOnClickListener {
-            startActivity(Intent(this@MainActivity,ActivityB::class.java))
-            Toast.makeText(this,"B'ye geçildi", Toast.LENGTH_SHORT).show()
-
+            startActivity(Intent(this@MainActivity, ActivityB::class.java))
+            Toast.makeText(this, "B'ye geçildi", Toast.LENGTH_SHORT).show()
 
 
         }
