@@ -11,31 +11,35 @@ class ActivityD : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_d)
 
-    }
+        buttonSecim.setOnClickListener {
 
-    //SEÇİLEN SEÇİMİ textView8 de string olarak göstermiyor.
-    //SEÇİLEN SEÇİMİ textView8 de string olarak göstermiyor.
-    //SEÇİLEN SEÇİMİ textView8 de string olarak göstermiyor.
-    //SEÇİLEN SEÇİMİ textView8 de string olarak göstermiyor.
-    //SEÇİLEN SEÇİMİ textView8 de string olarak göstermiyor.
-    //SEÇİLEN SEÇİMİ textView8 de string olarak göstermiyor.
+            val barcelonaDurum = radioButtonBarcelona.isChecked
+            val galatasarayDurum = radioButtonGalatasaray.isChecked
+            val JavaDurum = checkBoxJava.isChecked
+            val kotlinDurum = checkBoxKotlin.isChecked
 
-    override fun onBackPressed() {
+            var x = ""
+
+            if (barcelonaDurum){
+                x += "\n" +"Barcelona secildi."
+            }
+            if (galatasarayDurum){
+                x += "\n" +"Galatasaray secildi."
+            }
+            if (JavaDurum){
+                x += "\n" +"Java secildi."
+            }
+            if (kotlinDurum){
+                x += "\n" +"Kotlin secildi."
+            }
+
+            textView8.text=x
+
+        }
+    fun onBackPressed() {
         val intent = Intent(this@ActivityD,MainActivity::class.java)
         intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP)
         startActivity(intent)
-
-
-        buttonSecim.setOnClickListener {
-            val javadurum = checkBoxJava.isChecked
-            val kotlindurum = checkBoxKotlin.isChecked
-            val barcelonadurum = radioButtonBarcelona.isChecked
-            val galatasaraydurum = radioButtonGalatasaray.isChecked
-
-        textView8.text = javadurum.toString()
-        textView8.text = kotlindurum.toString()
-        textView8.text = barcelonadurum.toString()
-        textView8.text = galatasaraydurum.toString()
 
         }
 
