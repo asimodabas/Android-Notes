@@ -5,7 +5,9 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
 import android.widget.Toast
+import androidx.appcompat.app.AlertDialog
 import kotlinx.android.synthetic.main.activity_d.*
+import kotlinx.android.synthetic.main.fragmentbirinci.*
 
 class ActivityD : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -39,16 +41,15 @@ class ActivityD : AppCompatActivity() {
 
             textView8.text = x
 
+
         }
-
-
     }
 
     override fun onBackPressed() {
         val intent = Intent(this@ActivityD, MainActivity::class.java)
         intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP)
         startActivity(intent)
+    }
 
     }
 
-}

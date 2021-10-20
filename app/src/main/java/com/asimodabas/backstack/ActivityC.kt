@@ -1,16 +1,38 @@
 package com.asimodabas.backstack
 
+import android.content.DialogInterface
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
 import android.widget.SeekBar
+import android.widget.Toast
+import androidx.appcompat.app.AlertDialog
 import kotlinx.android.synthetic.main.activity_c.*
+import kotlinx.android.synthetic.main.activity_d.*
 
 class ActivityC : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_c)
+
+
+        buttonAlert.setOnClickListener {
+            val ad = AlertDialog.Builder(this)
+
+            ad.setMessage("Menü seçenekleri açılacak")
+            ad.setTitle("Menü Uyarısı")
+            ad.setIcon(R.drawable.ic_baseline_warning_24)
+            ad.setPositiveButton("Tamam") { DialogInterface, i ->
+                Toast.makeText(this, "Tamam Seçildi", Toast.LENGTH_SHORT).show()
+
+            }
+            ad.setNegativeButton("İptal") { DialogInterface, i ->
+                Toast.makeText(this, "İptal Seçildi", Toast.LENGTH_SHORT).show()
+
+            }
+
+        }
 
         GoToD.setOnClickListener {
             startActivity(Intent(this@ActivityC, ActivityD::class.java))

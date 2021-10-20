@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.PopupMenu
 import android.widget.Toast
+import androidx.appcompat.app.AlertDialog
 import kotlinx.android.synthetic.main.activity_main.*
 
 class MainActivity : AppCompatActivity() {
@@ -26,6 +27,11 @@ class MainActivity : AppCompatActivity() {
         buttonMenuAc.setOnClickListener {
             val popup = androidx.appcompat.widget.PopupMenu(this, buttonMenuAc)
             popup.menuInflater.inflate(R.menu.poppup_menu, popup.menu)
+
+
+
+
+
 
             popup.setOnMenuItemClickListener { item ->
 
