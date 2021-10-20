@@ -4,19 +4,16 @@ import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
+import android.widget.Toast
 import kotlinx.android.synthetic.main.activity_d.*
 
 class ActivityD : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
+
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_d)
 
-        fun onBackPressed() {
-            val intent = Intent(this@ActivityD, MainActivity::class.java)
-            intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP)
-            startActivity(intent)
 
-        }
 
         buttonSecim.setOnClickListener {
 
@@ -44,6 +41,13 @@ class ActivityD : AppCompatActivity() {
 
         }
 
+
+    }
+
+    override fun onBackPressed() {
+        val intent = Intent(this@ActivityD, MainActivity::class.java)
+        intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP)
+        startActivity(intent)
 
     }
 

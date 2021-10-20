@@ -6,6 +6,7 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import kotlinx.android.synthetic.main.activity_b.*
 import kotlinx.android.synthetic.main.activity_main.*
+import java.util.*
 
 class ActivityB : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -35,6 +36,8 @@ class ActivityB : AppCompatActivity() {
 //VİDEO TEXT OLDU DÜZELTİLECEK
 //VİDEO TEXT OLDU DÜZELTİLECEK
         }
+
+
 
     }
 }
