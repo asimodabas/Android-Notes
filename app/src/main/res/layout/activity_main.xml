@@ -33,7 +33,7 @@
         android:id="@+id/buttonMenuAc"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="268dp"
+        android:layout_marginTop="252dp"
         android:backgroundTint="@color/buttonRenk"
         android:text="Menü Aç"
         android:textColor="#000000"
@@ -71,11 +71,24 @@
     <ImageView
         android:id="@+id/imageView"
         android:layout_width="154dp"
-        android:layout_height="105dp"
-        android:layout_marginBottom="29dp"
+        android:layout_height="65dp"
+        android:layout_marginBottom="92dp"
+        app:layout_constraintBottom_toTopOf="@+id/goToB"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:srcCompat="@drawable/ic_baseline_more_horiz_24" />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fab"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="25dp"
+        android:backgroundTint="@color/KalpRenk"
+        android:clickable="true"
         app:layout_constraintBottom_toTopOf="@+id/goToB"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
-        app:srcCompat="@drawable/ic_baseline_more_horiz_24" />
+        app:srcCompat="@drawable/ic_baseline_add_24" />
 </androidx.constraintlayout.widget.ConstraintLayout>

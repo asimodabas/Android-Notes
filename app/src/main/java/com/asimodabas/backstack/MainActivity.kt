@@ -15,7 +15,9 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-
+    fab.setOnClickListener {
+        Toast.makeText(this,"Floating Action Button Aktif",Toast.LENGTH_SHORT).show()
+    }
 
         val fm = supportFragmentManager
         val ft = fm.beginTransaction()

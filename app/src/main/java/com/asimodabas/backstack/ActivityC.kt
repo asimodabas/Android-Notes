@@ -31,7 +31,7 @@ class ActivityC : AppCompatActivity() {
                 Toast.makeText(this, "İptal Seçildi", Toast.LENGTH_SHORT).show()
 
             }
-
+            ad.create().show()
         }
 
         GoToD.setOnClickListener {
