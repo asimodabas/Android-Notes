@@ -6,7 +6,9 @@ import android.os.Bundle
 import android.widget.PopupMenu
 import android.widget.Toast
 import androidx.appcompat.app.AlertDialog
+import androidx.appcompat.app.AppCompatDelegate
 import kotlinx.android.synthetic.main.activity_main.*
+import kotlinx.android.synthetic.main.fragmentbirinci.*
 
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -14,11 +16,23 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
 
 
+
         val fm = supportFragmentManager
         val ft = fm.beginTransaction()
         ft.add(R.id.fragment_tutucu, FragmentBirinci())
         ft.commit()
 
+
+        buttonNormal.setOnClickListener {
+            delegate.localNightMode = AppCompatDelegate.MODE_NIGHT_NO
+
+
+        }
+        buttonDark.setOnClickListener {
+            delegate.localNightMode = AppCompatDelegate.MODE_NIGHT_YES
+
+
+        }
         goToB.setOnClickListener {
             startActivity(Intent(this@MainActivity, ActivityB::class.java))
             Toast.makeText(this, "B'ye geçildi", Toast.LENGTH_SHORT).show()
@@ -58,6 +72,7 @@ class MainActivity : AppCompatActivity() {
 
             }
             popup.show()
+
 
 
         }

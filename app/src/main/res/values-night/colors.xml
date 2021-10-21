@@ -7,8 +7,8 @@
     <color name="teal_700">#FF018786</color>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
-    <color name="YaziRenk">#673AB7</color>
-    <color name="KalpRenk">#FFFFFF</color>
-    <color name="buttonRenk">#FFFFFF</color>
+    <color name="YaziRenk">#FFE500</color>
+    <color name="buttonRenk">#FF0000</color>
+    <color name="KalpRenk">#FF0000</color>
 
 </resources>
