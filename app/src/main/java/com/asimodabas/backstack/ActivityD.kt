@@ -4,12 +4,14 @@ import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
+import android.view.Menu
 import android.widget.Toast
 import androidx.appcompat.app.AlertDialog
+import androidx.appcompat.widget.SearchView
 import kotlinx.android.synthetic.main.activity_d.*
 import kotlinx.android.synthetic.main.fragmentbirinci.*
 
-class ActivityD : AppCompatActivity() {
+class ActivityD : AppCompatActivity(),SearchView.OnQueryTextListener {
     override fun onCreate(savedInstanceState: Bundle?) {
 
         super.onCreate(savedInstanceState)
@@ -50,6 +52,43 @@ class ActivityD : AppCompatActivity() {
         intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP)
         startActivity(intent)
     }
+    override fun onCreateOptionsMenu(menu: Menu): Boolean {
+        menuInflater.inflate(R.menu.menu_arama, menu)
+        val item=menu.findItem(R.id.actionAra)
+        val searchView=item.actionView as SearchView
+        searchView.setOnQueryTextListener(this)
 
+        return super.onCreateOptionsMenu(menu)
     }
+
+
+
+    override fun onQueryTextChange(newText: String?): Boolean {
+
+/////////////Log.e("onQueryTextChange",newText)
+/////////////Log.e("onQueryTextChange",newText)
+/////////////Log.e("onQueryTextChange",newText)
+/////////////Log.e("onQueryTextChange",newText)
+/////////////Log.e("onQueryTextChange",newText)
+/////////////Log.e("onQueryTextChange",newText)
+/////////////Log.e("onQueryTextChange",newText)
+/////////////Log.e("onQueryTextChange",newText)
+/////////////Log.e("onQueryTextChange",newText)
+        return true
+    }
+    override fun onQueryTextSubmit(query: String?): Boolean {
+//////////////Log.e("onQueryTextSubmit",query)
+//////////////Log.e("onQueryTextSubmit",query)
+//////////////Log.e("onQueryTextSubmit",query)
+//////////////Log.e("onQueryTextSubmit",query)
+//////////////Log.e("onQueryTextSubmit",query)
+//////////////Log.e("onQueryTextSubmit",query)
+//////////////Log.e("onQueryTextSubmit",query)
+//////////////Log.e("onQueryTextSubmit",query)
+//////////////Log.e("onQueryTextSubmit",query)
+
+        return true
+    }
+
+}
 
