@@ -64,28 +64,16 @@ class ActivityD : AppCompatActivity(),SearchView.OnQueryTextListener {
 
 
     override fun onQueryTextChange(newText: String?): Boolean {
+        if(newText != null){
+            Log.e("onQueryTextChange",newText)
+        }
 
-/////////////Log.e("onQueryTextChange",newText)
-/////////////Log.e("onQueryTextChange",newText)
-/////////////Log.e("onQueryTextChange",newText)
-/////////////Log.e("onQueryTextChange",newText)
-/////////////Log.e("onQueryTextChange",newText)
-/////////////Log.e("onQueryTextChange",newText)
-/////////////Log.e("onQueryTextChange",newText)
-/////////////Log.e("onQueryTextChange",newText)
-/////////////Log.e("onQueryTextChange",newText)
+        Log.e("onQueryTextChange",newText!!)
+
         return true
     }
     override fun onQueryTextSubmit(query: String?): Boolean {
-//////////////Log.e("onQueryTextSubmit",query)
-//////////////Log.e("onQueryTextSubmit",query)
-//////////////Log.e("onQueryTextSubmit",query)
-//////////////Log.e("onQueryTextSubmit",query)
-//////////////Log.e("onQueryTextSubmit",query)
-//////////////Log.e("onQueryTextSubmit",query)
-//////////////Log.e("onQueryTextSubmit",query)
-//////////////Log.e("onQueryTextSubmit",query)
-//////////////Log.e("onQueryTextSubmit",query)
+        Log.e("onQueryTextSubmit",query!!)
 
         return true
     }

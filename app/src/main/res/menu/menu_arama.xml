@@ -7,7 +7,5 @@
         android:icon="@drawable/search_24"
         android:title="Ara"
         app:showAsAction="always|collapseActionView"
-        android:actionViewClass="androidx.appcompat.widget.SearchView"
-
-        />
+        app:actionViewClass="androidx.appcompat.widget.SearchView" />
 </menu>
