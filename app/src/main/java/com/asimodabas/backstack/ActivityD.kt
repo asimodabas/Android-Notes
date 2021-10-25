@@ -8,6 +8,7 @@ import android.view.Menu
 import android.widget.Toast
 import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.widget.SearchView
+import kotlinx.android.synthetic.main.activity_c.*
 import kotlinx.android.synthetic.main.activity_d.*
 import kotlinx.android.synthetic.main.fragmentbirinci.*
 
@@ -16,6 +17,11 @@ class ActivityD : AppCompatActivity(),SearchView.OnQueryTextListener {
 
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_d)
+
+        buttonGotoE.setOnClickListener {
+            startActivity(Intent(this@ActivityD, NavigationDrawer::class.java))
+
+        }
 
 
 

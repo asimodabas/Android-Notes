@@ -3,10 +3,7 @@ package com.asimodabas.backstack
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.view.Menu
-import android.widget.PopupMenu
 import android.widget.Toast
-import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.app.AppCompatDelegate
 import kotlinx.android.synthetic.main.activity_main.*
 import kotlinx.android.synthetic.main.fragmentbirinci.*
@@ -23,7 +20,7 @@ class MainActivity : AppCompatActivity() {
 
         val fm = supportFragmentManager
         val ft = fm.beginTransaction()
-        ft.add(R.id.fragment_tutucu, FragmentBirinci())
+        ft.add(R.id.fragment_tutucuu, FragmentBirinci())
         ft.commit()
 
 

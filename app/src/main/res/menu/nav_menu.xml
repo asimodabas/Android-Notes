@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+
+    <item
+
+        android:title="Birinci Bölüm">
+
+    <menu>
+        <item android:id="@+id/nav_item_birinci"
+    android:title="Birinci"/>
+
+        <item android:id="@+id/nav_item_ikinci"
+    android:title="İkinci"/>
+
+    </menu>
+
+
+</item>
+
+
+
+    <item
+
+        android:title="İkinci Bölüm">
+        <menu>
+            <item android:id="@+id/nav_item_ucuncu"
+                android:title="Üçüncü"/>
+
+
+        </menu>
+
+    </item>
+
+</menu>

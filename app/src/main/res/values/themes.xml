@@ -14,5 +14,15 @@
         <!-- Customize your theme here. -->
 
 
+
+        //Toolbar geri getirilirse çalışmayan fonksiyonlar aktif edilir.
+        //Toolbar geri getirilirse çalışmayan fonksiyonlar aktif edilir.
+        //Toolbar geri getirilirse çalışmayan fonksiyonlar aktif edilir.
+
+
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+
+
     </style>
 </resources>
