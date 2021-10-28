@@ -1,5 +1,6 @@
 package com.asimodabas.backstack
 
+import android.content.Context
 import android.content.DialogInterface
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
@@ -10,6 +11,9 @@ import android.widget.Toast
 import androidx.appcompat.app.AlertDialog
 import kotlinx.android.synthetic.main.activity_c.*
 import kotlinx.android.synthetic.main.activity_d.*
+import java.io.*
+import java.lang.StringBuilder
+import kotlin.Exception
 
 class ActivityC : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -88,5 +92,128 @@ class ActivityC : AppCompatActivity() {
         })
 
 
+        buttonYaz.setOnClickListener {
+            //    hariciYaz()
+            //    dahiliYaz()
+
+        }
+        buttonSil.setOnClickListener {
+            //    hariciSil()
+            //    dahiliOku()
+        }
+        buttonOku.setOnClickListener {
+            //    hariciOku()
+            //    dahiliSil()
+        }
+
     }
+
+    fun hariciYaz() {
+        try {
+            val yol = applicationContext.getExternalFilesDir(null)?.absolutePath
+            val dosya = File(yol, "dosyam.txt")
+            if (!dosya.exists()) {
+                dosya.createNewFile()
+            }
+            val fw = FileWriter(dosya)
+            val yazici = BufferedWriter(fw)
+            yazici.write(editTextGirdi.text.toString())
+
+            yazici.flush()
+            yazici.close()
+            fw.close()
+
+            editTextGirdi.setText("")
+
+        } catch (e: Exception) {
+            e.printStackTrace()
+        }
+    }
+
+    fun hariciOku() {
+        try {
+            val yol = applicationContext.getExternalFilesDir(null)?.absolutePath
+            val dosya = File(yol, "dosyam.txt")
+
+            val fr = FileReader(dosya)
+            val okuyucu = BufferedReader(fr)
+
+            val sb = StringBuilder()
+            var satir: String? = null
+
+            while ({ satir = okuyucu.readLine();satir }() != null) {
+                sb.append(satir + "\n")
+            }
+            okuyucu.close()
+            editTextGirdi.setText(sb.toString())
+
+
+        } catch (e: Exception) {
+            e.printStackTrace()
+        }
+
+    }
+
+    fun hariciSil() {
+        val yol = applicationContext.getExternalFilesDir(null)?.absolutePath
+        val dosya = File(yol, "dosyam.txt")
+
+        dosya.delete()
+    }
+
+    fun dahiliYaz() {
+        try {
+            val fo = openFileOutput("dosyam.txt", Context.MODE_PRIVATE)
+            val yazici = OutputStreamWriter(fo)
+            yazici.write(editTextGirdi.text.toString())
+            yazici.close()
+            editTextGirdi.setText("")
+
+        } catch (e: Exception) {
+
+        }
+
+    }
+
+    fun dahiliOku() {
+        try {
+            val fi = openFileInput("dosyam.txt")
+            val isr = InputStreamReader(fi)
+            val okuyucu = BufferedReader(isr)
+
+            val sb = StringBuilder()
+            var satir: String? = null
+
+            while ({ satir = okuyucu.readLine();satir }() != null) {
+                sb.append(satir + "\n")
+            }
+
+            okuyucu.close()
+            editTextGirdi.setText(sb.toString())
+
+
+        } catch (e: Exception) {
+
+        }
+
+
+    }
+
+    fun dahiliSil() {
+        val dir = filesDir
+        var dosya = File(dir, "dosyam.txt")
+        dosya.delete()
+    }
+
 }
+//SDK location not found.
+//SDK location not found.
+//SDK location not found.
+//SDK location not found.
+//SDK location not found.
+//SDK location not found.
+//SDK location not found.
+//SDK location not found.
+//SDK location not found.
+//SDK location not found.
+//SDK location not found.
