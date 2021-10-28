@@ -1,19 +1,16 @@
 package com.asimodabas.backstack
 
 import android.content.Context
-import android.content.DialogInterface
 import android.content.Intent
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
 import android.widget.SeekBar
 import android.widget.Toast
 import androidx.appcompat.app.AlertDialog
+import androidx.appcompat.app.AppCompatActivity
 import kotlinx.android.synthetic.main.activity_c.*
 import kotlinx.android.synthetic.main.activity_d.*
 import java.io.*
-import java.lang.StringBuilder
-import kotlin.Exception
 
 class ActivityC : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -93,16 +90,16 @@ class ActivityC : AppCompatActivity() {
 
 
         buttonYaz.setOnClickListener {
-            //    hariciYaz()
+            hariciYaz()
             //    dahiliYaz()
 
         }
         buttonSil.setOnClickListener {
-            //    hariciSil()
+            hariciSil()
             //    dahiliOku()
         }
         buttonOku.setOnClickListener {
-            //    hariciOku()
+            hariciOku()
             //    dahiliSil()
         }
 
@@ -161,6 +158,7 @@ class ActivityC : AppCompatActivity() {
         dosya.delete()
     }
 
+    //Dahili depolama aktif etmek için
     fun dahiliYaz() {
         try {
             val fo = openFileOutput("dosyam.txt", Context.MODE_PRIVATE)
@@ -175,6 +173,7 @@ class ActivityC : AppCompatActivity() {
 
     }
 
+    //Dahili depolama aktif etmek için
     fun dahiliOku() {
         try {
             val fi = openFileInput("dosyam.txt")
@@ -199,6 +198,7 @@ class ActivityC : AppCompatActivity() {
 
     }
 
+    //Dahili depolama aktif etmek için
     fun dahiliSil() {
         val dir = filesDir
         var dosya = File(dir, "dosyam.txt")
@@ -206,14 +206,4 @@ class ActivityC : AppCompatActivity() {
     }
 
 }
-//SDK location not found.
-//SDK location not found.
-//SDK location not found.
-//SDK location not found.
-//SDK location not found.
-//SDK location not found.
-//SDK location not found.
-//SDK location not found.
-//SDK location not found.
-//SDK location not found.
-//SDK location not found.
+
