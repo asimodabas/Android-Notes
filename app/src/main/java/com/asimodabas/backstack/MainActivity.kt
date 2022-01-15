@@ -10,6 +10,7 @@ import kotlinx.android.synthetic.main.activity_main.*
 import kotlinx.android.synthetic.main.fragmentbirinci.*
 
 class MainActivity : AppCompatActivity() {
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
@@ -22,24 +23,21 @@ class MainActivity : AppCompatActivity() {
         editor.apply()
         textsayac.text = "Programa Giriş Sayısı :$sayac"
 
-        fab.setOnClickListener {
-            Toast.makeText(this, "Floating Action Button Aktif", Toast.LENGTH_SHORT).show()
-        }
-
         val fm = supportFragmentManager
         val ft = fm.beginTransaction()
         ft.add(R.id.fragment_tutucuu, FragmentBirinci())
         ft.commit()
 
 
+        fab.setOnClickListener {
+            Toast.makeText(this, "Floating Action Button Aktif", Toast.LENGTH_SHORT).show()
+        }
         buttonNormal.setOnClickListener {
             delegate.localNightMode = AppCompatDelegate.MODE_NIGHT_NO
-
 
         }
         buttonDark.setOnClickListener {
             delegate.localNightMode = AppCompatDelegate.MODE_NIGHT_YES
-
 
         }
         goToB.setOnClickListener {
@@ -48,43 +46,34 @@ class MainActivity : AppCompatActivity() {
         }
 
         buttonMenuAc.setOnClickListener {
-            val popup = androidx.appcompat.widget.PopupMenu(this, buttonMenuAc)
-            popup.menuInflater.inflate(R.menu.poppup_menu, popup.menu)
-
-
-
-
-
-
-            popup.setOnMenuItemClickListener { item ->
-
-                when (item.itemId) {
-
-                    R.id.ActionSil -> {
-
-                        Toast.makeText(this, "Sil Seçildi", Toast.LENGTH_SHORT).show()
-                        true
-
-
-                    }
-                    R.id.ActionDüzenle -> {
-                        Toast.makeText(this, "Düzenle Seçildi", Toast.LENGTH_SHORT).show()
-                        true
-
-                    }
-                    else -> {
-                        false
-                    }
-
-                }
-
-
-            }
-            popup.show()
-
-
+            popup()
         }
+    }
 
 
+    fun popup() {
+        val popup = androidx.appcompat.widget.PopupMenu(this, buttonMenuAc)
+        popup.menuInflater.inflate(R.menu.poppup_menu, popup.menu)
+
+
+        popup.setOnMenuItemClickListener { item ->
+
+            when (item.itemId) {
+
+                R.id.ActionSil -> {
+
+                    Toast.makeText(this, "Sil Seçildi", Toast.LENGTH_SHORT).show()
+                    true
+                }
+                R.id.ActionDüzenle -> {
+                    Toast.makeText(this, "Düzenle Seçildi", Toast.LENGTH_SHORT).show()
+                    true
+                }
+                else -> {
+                    false
+                }
+            }
+        }
+        popup.show()
     }
 }
