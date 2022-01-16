@@ -8,6 +8,9 @@ import android.widget.Toast
 import androidx.appcompat.app.AppCompatDelegate
 import kotlinx.android.synthetic.main.activity_main.*
 import kotlinx.android.synthetic.main.fragmentbirinci.*
+import kotlinx.coroutines.GlobalScope
+import kotlinx.coroutines.delay
+import kotlinx.coroutines.launch
 
 class MainActivity : AppCompatActivity() {
 
@@ -28,7 +31,6 @@ class MainActivity : AppCompatActivity() {
         ft.add(R.id.fragment_tutucuu, FragmentBirinci())
         ft.commit()
 
-
         fab.setOnClickListener {
             Toast.makeText(this, "Floating Action Button Aktif", Toast.LENGTH_SHORT).show()
         }
@@ -48,6 +50,9 @@ class MainActivity : AppCompatActivity() {
         buttonMenuAc.setOnClickListener {
             popup()
         }
+
+      //runBlocking()
+      //globalScope()
     }
 
 
@@ -76,4 +81,25 @@ class MainActivity : AppCompatActivity() {
         }
         popup.show()
     }
+
+   fun runBlocking(){
+        println("Before")
+        kotlinx.coroutines.runBlocking {
+            launch {
+            delay(2500)
+            println("runBlocking")
+        } }
+        println("After")
+    }
+
+    fun globalScope(){
+        println("Before")
+        GlobalScope
+            .launch {
+            delay(2500)
+            println("globalScope")
+        }
+        println("After")
+    }
+
 }
