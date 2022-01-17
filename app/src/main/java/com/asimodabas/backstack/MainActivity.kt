@@ -8,9 +8,7 @@ import android.widget.Toast
 import androidx.appcompat.app.AppCompatDelegate
 import kotlinx.android.synthetic.main.activity_main.*
 import kotlinx.android.synthetic.main.fragmentbirinci.*
-import kotlinx.coroutines.GlobalScope
-import kotlinx.coroutines.delay
-import kotlinx.coroutines.launch
+import kotlinx.coroutines.*
 
 class MainActivity : AppCompatActivity() {
 
@@ -53,6 +51,8 @@ class MainActivity : AppCompatActivity() {
 
       //runBlocking()
       //globalScope()
+      //coroutineScope()
+      //nestedCoroutine()
     }
 
 
@@ -100,6 +100,30 @@ class MainActivity : AppCompatActivity() {
             println("globalScope")
         }
         println("After")
+    }
+
+    fun coroutineScope(){
+        println("Before")
+        CoroutineScope(Dispatchers.Default).launch {
+            delay(2500)
+            println("coroutineScope")
+        }
+        println("After")
+    }
+
+    fun nestedCoroutine(){
+        runBlocking {
+            launch {
+                delay(5000)
+                println("runBlocking")
+            }
+            coroutineScope {
+                launch {
+                    delay(2500)
+                    println("coroutineScope")
+                }
+            }
+        }
     }
 
 }
