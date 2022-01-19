@@ -53,6 +53,7 @@ class MainActivity : AppCompatActivity() {
       //globalScope()
       //coroutineScope()
       //nestedCoroutine()
+
     }
 
 
@@ -125,5 +126,6 @@ class MainActivity : AppCompatActivity() {
             }
         }
     }
+
 
 }
