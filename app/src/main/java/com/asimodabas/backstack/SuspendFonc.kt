@@ -4,6 +4,9 @@ import kotlinx.coroutines.coroutineScope
 import kotlinx.coroutines.delay
 import kotlinx.coroutines.runBlocking
 
+
+/*
+
 fun main() {
 
     runBlocking {
@@ -11,12 +14,14 @@ fun main() {
         println("run blocking")
         myFunction()
     }
-
 }
 
 suspend fun myFunction() {
+
     coroutineScope {
         delay(4000)
         println("suspend function")
     }
 }
+
+ */
