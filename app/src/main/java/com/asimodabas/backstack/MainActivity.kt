@@ -2,10 +2,11 @@ package com.asimodabas.backstack
 
 import android.content.Context
 import android.content.Intent
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Toast
+import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.app.AppCompatDelegate
+import androidx.work.*
 import kotlinx.android.synthetic.main.activity_main.*
 import kotlinx.android.synthetic.main.fragmentbirinci.*
 import kotlinx.coroutines.*
@@ -15,6 +16,20 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
+
+        val data = Data.Builder().putInt("intKey",1).build()
+        val constraints = Constraints.Builder()
+            .setRequiresCharging(false) //Example
+            .build()
+
+        val myWorkRequest : WorkRequest = OneTimeWorkRequestBuilder<RefreshDatabase>()
+            .setConstraints(constraints)
+            .setInputData(data)
+            //.setInitialDelay(5,TimeUnit.MICROSECONDS)
+            //.addTag("myTag")
+            .build()
+
+        WorkManager.getInstance(this).enqueue(myWorkRequest)
 
         val sp = getSharedPreferences("GirisSayici", Context.MODE_PRIVATE)
         var sayac = sp.getInt("sayac", 0)
