@@ -10,6 +10,7 @@ import androidx.work.*
 import kotlinx.android.synthetic.main.activity_main.*
 import kotlinx.android.synthetic.main.fragmentbirinci.*
 import kotlinx.coroutines.*
+import java.util.concurrent.TimeUnit
 
 class MainActivity : AppCompatActivity() {
 
@@ -22,6 +23,7 @@ class MainActivity : AppCompatActivity() {
             .setRequiresCharging(false) //Example
             .build()
 
+        /*
         val myWorkRequest : WorkRequest = OneTimeWorkRequestBuilder<RefreshDatabase>()
             .setConstraints(constraints)
             .setInputData(data)
@@ -30,6 +32,14 @@ class MainActivity : AppCompatActivity() {
             .build()
 
         WorkManager.getInstance(this).enqueue(myWorkRequest)
+         */
+        val myWorkRequest : WorkRequest = PeriodicWorkRequestBuilder<RefreshDatabase>(15,TimeUnit.MINUTES)
+            .setConstraints(constraints)
+            .setInputData(data)
+            .build()
+
+        WorkManager.getInstance(this).enqueue(myWorkRequest)
+
 
         val sp = getSharedPreferences("GirisSayici", Context.MODE_PRIVATE)
         var sayac = sp.getInt("sayac", 0)
