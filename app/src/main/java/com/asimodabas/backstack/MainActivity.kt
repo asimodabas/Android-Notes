@@ -6,6 +6,7 @@ import android.os.Bundle
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.app.AppCompatDelegate
+import androidx.lifecycle.Observer
 import androidx.work.*
 import kotlinx.android.synthetic.main.activity_main.*
 import kotlinx.android.synthetic.main.fragmentbirinci.*
@@ -39,7 +40,32 @@ class MainActivity : AppCompatActivity() {
             .build()
 
         WorkManager.getInstance(this).enqueue(myWorkRequest)
+        WorkManager.getInstance(this).getWorkInfoByIdLiveData(myWorkRequest.id).observe(this,
+            Observer {
+                if (it.state == WorkInfo.State.RUNNING){
+                    println("Run...")
+                }else if (it.state == WorkInfo.State.FAILED){
+                    println("Fail...")
+                }else if (it.state == WorkInfo.State.SUCCEEDED){
+                    println("Success...")
+                }
+            })
 
+        //WorkManager.getInstance(this).cancelAllWork()
+
+        /*
+
+        //Chaining
+        val oneTimeRequest : OneTimeWorkRequest = OneTimeWorkRequestBuilder<RefreshDatabase>()
+            .setConstraints(constraints)
+            .setInputData(data)
+            .build()
+        WorkManager.getInstance(this).beginWith(oneTimeRequest)
+            .then(oneTimeRequest)
+            .then(oneTimeRequest)
+            .enqueue()
+
+         */
 
         val sp = getSharedPreferences("GirisSayici", Context.MODE_PRIVATE)
         var sayac = sp.getInt("sayac", 0)
