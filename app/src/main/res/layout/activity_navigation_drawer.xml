@@ -5,9 +5,8 @@
     android:id="@+id/drawer"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:openDrawer="start"
-    tools:context=".NavigationDrawer">
-
+    tools:context=".NavigationDrawer"
+    tools:openDrawer="start">
 
 
     <androidx.constraintlayout.widget.ConstraintLayout

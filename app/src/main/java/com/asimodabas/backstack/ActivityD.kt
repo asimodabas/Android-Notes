@@ -12,7 +12,7 @@ import kotlinx.android.synthetic.main.activity_c.*
 import kotlinx.android.synthetic.main.activity_d.*
 import kotlinx.android.synthetic.main.fragmentbirinci.*
 
-class ActivityD : AppCompatActivity(),SearchView.OnQueryTextListener {
+class ActivityD : AppCompatActivity(), SearchView.OnQueryTextListener {
     override fun onCreate(savedInstanceState: Bundle?) {
 
         super.onCreate(savedInstanceState)
@@ -58,28 +58,29 @@ class ActivityD : AppCompatActivity(),SearchView.OnQueryTextListener {
         intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP)
         startActivity(intent)
     }
+
     override fun onCreateOptionsMenu(menu: Menu): Boolean {
         menuInflater.inflate(R.menu.menu_arama, menu)
-        val item=menu.findItem(R.id.actionAra)
-        val searchView=item.actionView as SearchView
+        val item = menu.findItem(R.id.actionAra)
+        val searchView = item.actionView as SearchView
         searchView.setOnQueryTextListener(this)
 
         return super.onCreateOptionsMenu(menu)
     }
 
 
-
     override fun onQueryTextChange(newText: String?): Boolean {
-        if(newText != null){
-            Log.e("onQueryTextChange",newText)
+        if (newText != null) {
+            Log.e("onQueryTextChange", newText)
         }
 
-        Log.e("onQueryTextChange",newText!!)
+        Log.e("onQueryTextChange", newText!!)
 
         return true
     }
+
     override fun onQueryTextSubmit(query: String?): Boolean {
-        Log.e("onQueryTextSubmit",query!!)
+        Log.e("onQueryTextSubmit", query!!)
 
         return true
     }

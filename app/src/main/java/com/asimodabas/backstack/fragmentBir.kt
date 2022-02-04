@@ -8,10 +8,13 @@ import androidx.fragment.app.Fragment
 import kotlinx.android.synthetic.main.fragment_bir.*
 import java.lang.Exception
 
-class fragmentBir :Fragment(){
-    override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
-        return inflater.inflate(R.layout.fragment_bir,container,false)
-
+class fragmentBir : Fragment() {
+    override fun onCreateView(
+        inflater: LayoutInflater,
+        container: ViewGroup?,
+        savedInstanceState: Bundle?
+    ): View? {
+        return inflater.inflate(R.layout.fragment_bir, container, false)
 
 
     }

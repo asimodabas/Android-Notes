@@ -5,8 +5,7 @@ import kotlinx.coroutines.delay
 import kotlinx.coroutines.launch
 import kotlinx.coroutines.runBlocking
 
-fun main(){
-
+fun main() {
 
 
     var userName = ""
@@ -41,13 +40,15 @@ fun main(){
     }
 
 }
-suspend fun downloadName() : String{
+
+suspend fun downloadName(): String {
     delay(2000)
     val userName = "Asim:"
     println("Username Download")
     return userName
 }
-suspend fun downloadAge() : Int{
+
+suspend fun downloadAge(): Int {
     delay(4000)
     val userAge = 60
     println("Userage Download")
