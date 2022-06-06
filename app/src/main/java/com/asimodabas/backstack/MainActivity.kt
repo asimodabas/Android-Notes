@@ -19,7 +19,7 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        val data = Data.Builder().putInt("intKey",1).build()
+        val data = Data.Builder().putInt("intKey", 1).build()
         val constraints = Constraints.Builder()
             .setRequiresCharging(false) //Example
             .build()
@@ -34,19 +34,20 @@ class MainActivity : AppCompatActivity() {
 
         WorkManager.getInstance(this).enqueue(myWorkRequest)
          */
-        val myWorkRequest : WorkRequest = PeriodicWorkRequestBuilder<RefreshDatabase>(15,TimeUnit.MINUTES)
-            .setConstraints(constraints)
-            .setInputData(data)
-            .build()
+        val myWorkRequest: WorkRequest =
+            PeriodicWorkRequestBuilder<RefreshDatabase>(15, TimeUnit.MINUTES)
+                .setConstraints(constraints)
+                .setInputData(data)
+                .build()
 
         WorkManager.getInstance(this).enqueue(myWorkRequest)
         WorkManager.getInstance(this).getWorkInfoByIdLiveData(myWorkRequest.id).observe(this,
             Observer {
-                if (it.state == WorkInfo.State.RUNNING){
+                if (it.state == WorkInfo.State.RUNNING) {
                     println("Run...")
-                }else if (it.state == WorkInfo.State.FAILED){
+                } else if (it.state == WorkInfo.State.FAILED) {
                     println("Fail...")
-                }else if (it.state == WorkInfo.State.SUCCEEDED){
+                } else if (it.state == WorkInfo.State.SUCCEEDED) {
                     println("Success...")
                 }
             })
@@ -100,11 +101,10 @@ class MainActivity : AppCompatActivity() {
             popup()
         }
 
-      //runBlocking()
-      //globalScope()
-      //coroutineScope()
-      //nestedCoroutine()
-
+        //runBlocking()
+        //globalScope()
+        //coroutineScope()
+        //nestedCoroutine()
     }
 
 
@@ -116,7 +116,6 @@ class MainActivity : AppCompatActivity() {
         popup.setOnMenuItemClickListener { item ->
 
             when (item.itemId) {
-
                 R.id.ActionSil -> {
 
                     Toast.makeText(this, "Sil Seçildi", Toast.LENGTH_SHORT).show()
@@ -134,27 +133,28 @@ class MainActivity : AppCompatActivity() {
         popup.show()
     }
 
-   fun runBlocking(){
+    fun runBlocking() {
         println("Before")
         kotlinx.coroutines.runBlocking {
             launch {
-            delay(2500)
-            println("runBlocking")
-        } }
-        println("After")
-    }
-
-    fun globalScope(){
-        println("Before")
-        GlobalScope
-            .launch {
-            delay(2500)
-            println("globalScope")
+                delay(2500)
+                println("runBlocking")
+            }
         }
         println("After")
     }
 
-    fun coroutineScope(){
+    fun globalScope() {
+        println("Before")
+        GlobalScope
+            .launch {
+                delay(2500)
+                println("globalScope")
+            }
+        println("After")
+    }
+
+    fun coroutineScope() {
         println("Before")
         CoroutineScope(Dispatchers.Default).launch {
             delay(2500)
@@ -163,7 +163,7 @@ class MainActivity : AppCompatActivity() {
         println("After")
     }
 
-    fun nestedCoroutine(){
+    fun nestedCoroutine() {
         runBlocking {
             launch {
                 delay(5000)
@@ -177,6 +177,4 @@ class MainActivity : AppCompatActivity() {
             }
         }
     }
-
-
 }

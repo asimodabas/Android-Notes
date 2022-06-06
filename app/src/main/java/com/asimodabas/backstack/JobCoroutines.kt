@@ -20,9 +20,6 @@ fun main(){
         myJob.invokeOnCompletion {
             println("my job end")
         }
-
         myJob.cancel()
-
     }
-
 }

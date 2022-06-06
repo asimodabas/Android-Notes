@@ -26,11 +26,6 @@ class FragmentBirinci : Fragment() {
             Toast.makeText(activity, "Tıklandı", Toast.LENGTH_SHORT).show()
 
         }
-
-
-
-
         return rootView
     }
-
 }

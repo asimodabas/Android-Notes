@@ -23,8 +23,6 @@ class ActivityD : AppCompatActivity(), SearchView.OnQueryTextListener {
 
         }
 
-
-
         buttonSecim.setOnClickListener {
 
             val barcelonaDurum = radioButtonBarcelona.isChecked

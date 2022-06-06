@@ -17,7 +17,6 @@ class ActivityC : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_c)
 
-
         buttonAlert.setOnClickListener {
             val ad = AlertDialog.Builder(this)
 
@@ -26,7 +25,6 @@ class ActivityC : AppCompatActivity() {
             ad.setIcon(R.drawable.ic_baseline_warning_24)
             ad.setPositiveButton("Tamam") { DialogInterface, i ->
                 Toast.makeText(this, "Tamam Seçildi", Toast.LENGTH_SHORT).show()
-
             }
             ad.setNegativeButton("İptal") { DialogInterface, i ->
                 Toast.makeText(this, "İptal Seçildi", Toast.LENGTH_SHORT).show()
@@ -37,7 +35,6 @@ class ActivityC : AppCompatActivity() {
 
         GoToD.setOnClickListener {
             startActivity(Intent(this@ActivityC, ActivityD::class.java))
-
         }
 
         switch1.setOnCheckedChangeListener { compoundButton, b ->
@@ -51,7 +48,6 @@ class ActivityC : AppCompatActivity() {
                 val girdi = b.toString()
                 textView6Durum.text = girdi.toString()
                 Log.e("Switch Kapalı", "OFF")
-
             }
             toggleButton.setOnCheckedChangeListener { compoundButton, b ->
 
@@ -59,14 +55,11 @@ class ActivityC : AppCompatActivity() {
                     Log.e("ToggleButton Açık", "ON")
                     val girdi = b.toString()
                     textView6Durum.text = girdi.toString()
-
-
                 } else {
                     Log.e("ToggleButton Kapalı", "OFF")
                     val girdi = b.toString()
                     textView6Durum.text = girdi.toString()
                     Log.e("Switch Kapalı", "OFF")
-
                 }
             }
         }
@@ -79,20 +72,15 @@ class ActivityC : AppCompatActivity() {
             }
 
             override fun onStartTrackingTouch(p0: SeekBar?) {
-
             }
 
             override fun onStopTrackingTouch(p0: SeekBar?) {
-
             }
-
         })
-
 
         buttonYaz.setOnClickListener {
             hariciYaz()
             //    dahiliYaz()
-
         }
         buttonSil.setOnClickListener {
             hariciSil()
@@ -102,7 +90,6 @@ class ActivityC : AppCompatActivity() {
             hariciOku()
             //    dahiliSil()
         }
-
     }
 
     fun hariciYaz() {
@@ -121,7 +108,6 @@ class ActivityC : AppCompatActivity() {
             fw.close()
 
             editTextGirdi.setText("")
-
         } catch (e: Exception) {
             e.printStackTrace()
         }
@@ -148,7 +134,6 @@ class ActivityC : AppCompatActivity() {
         } catch (e: Exception) {
             e.printStackTrace()
         }
-
     }
 
     fun hariciSil() {
@@ -166,11 +151,8 @@ class ActivityC : AppCompatActivity() {
             yazici.write(editTextGirdi.text.toString())
             yazici.close()
             editTextGirdi.setText("")
-
         } catch (e: Exception) {
-
         }
-
     }
 
     //Dahili depolama aktif etmek için
@@ -186,16 +168,10 @@ class ActivityC : AppCompatActivity() {
             while ({ satir = okuyucu.readLine();satir }() != null) {
                 sb.append(satir + "\n")
             }
-
             okuyucu.close()
             editTextGirdi.setText(sb.toString())
-
-
         } catch (e: Exception) {
-
         }
-
-
     }
 
     //Dahili depolama aktif etmek için
@@ -204,6 +180,5 @@ class ActivityC : AppCompatActivity() {
         var dosya = File(dir, "dosyam.txt")
         dosya.delete()
     }
-
 }
 

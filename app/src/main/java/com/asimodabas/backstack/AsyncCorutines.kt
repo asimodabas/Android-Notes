@@ -7,7 +7,6 @@ import kotlinx.coroutines.runBlocking
 
 fun main() {
 
-
     var userName = ""
     var userAge = 0
 
