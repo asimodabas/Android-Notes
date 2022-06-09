@@ -4,7 +4,7 @@ import kotlinx.coroutines.delay
 import kotlinx.coroutines.launch
 import kotlinx.coroutines.runBlocking
 
-fun main(){
+fun main() {
 
 
     runBlocking {
@@ -16,7 +16,6 @@ fun main(){
                 println("job 2")
             }
         }
-
         myJob.invokeOnCompletion {
             println("my job end")
         }

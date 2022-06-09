@@ -37,7 +37,6 @@ fun main() {
 
         println("${userName} ${userAge}")
     }
-
 }
 
 suspend fun downloadName(): String {
@@ -52,6 +51,5 @@ suspend fun downloadAge(): Int {
     val userAge = 60
     println("Userage Download")
     return userAge
-
 }
 

@@ -100,7 +100,6 @@ class MainActivity : AppCompatActivity() {
         buttonMenuAc.setOnClickListener {
             popup()
         }
-
         //runBlocking()
         //globalScope()
         //coroutineScope()

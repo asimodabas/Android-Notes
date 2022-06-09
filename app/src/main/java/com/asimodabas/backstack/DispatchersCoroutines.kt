@@ -13,7 +13,6 @@ fun main() {
     //Dispatchers.Unconfined -> Inherited dispatcher
 
     /* runBlocking {
-
          launch(Dispatchers.Main) {
              println("Main Thread: ${Thread.currentThread().name}")
          }
@@ -30,6 +29,5 @@ fun main() {
              println("Unconfined Thread: ${Thread.currentThread().name}")
          }
      }
-
      */
 }

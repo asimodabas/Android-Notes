@@ -28,7 +28,6 @@ class ActivityC : AppCompatActivity() {
             }
             ad.setNegativeButton("İptal") { DialogInterface, i ->
                 Toast.makeText(this, "İptal Seçildi", Toast.LENGTH_SHORT).show()
-
             }
             ad.create().show()
         }
@@ -129,7 +128,6 @@ class ActivityC : AppCompatActivity() {
             }
             okuyucu.close()
             editTextGirdi.setText(sb.toString())
-
 
         } catch (e: Exception) {
             e.printStackTrace()

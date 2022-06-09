@@ -20,7 +20,6 @@ class ActivityD : AppCompatActivity(), SearchView.OnQueryTextListener {
 
         buttonGotoE.setOnClickListener {
             startActivity(Intent(this@ActivityD, NavigationDrawer::class.java))
-
         }
 
         buttonSecim.setOnClickListener {
@@ -46,8 +45,6 @@ class ActivityD : AppCompatActivity(), SearchView.OnQueryTextListener {
             }
 
             textView8.text = x
-
-
         }
     }
 
@@ -82,6 +79,5 @@ class ActivityD : AppCompatActivity(), SearchView.OnQueryTextListener {
 
         return true
     }
-
 }
 

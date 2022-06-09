@@ -13,7 +13,6 @@ import kotlinx.android.synthetic.main.fragmentbirinci.view.*
 
 class FragmentBirinci : Fragment() {
 
-
     override fun onCreateView(
         inflater: LayoutInflater,
         container: ViewGroup?,
@@ -24,7 +23,6 @@ class FragmentBirinci : Fragment() {
 
         rootView.buttonTikla.setOnClickListener {
             Toast.makeText(activity, "Tıklandı", Toast.LENGTH_SHORT).show()
-
         }
         return rootView
     }

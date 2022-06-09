@@ -16,8 +16,6 @@ class ActivityB : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_b)
 
-
-
         goToC.setOnClickListener {
             startActivity(Intent(this@ActivityB, ActivityC::class.java))
 
@@ -35,8 +33,6 @@ class ActivityB : AppCompatActivity() {
         buttonDur.setOnClickListener {
             videoView.stopPlayback()
         }
-
-
     }
 
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
@@ -55,12 +51,10 @@ class ActivityB : AppCompatActivity() {
             }
             else -> return super.onOptionsItemSelected(item)
         }
-
     }
 
     override fun onCreateOptionsMenu(menu: Menu?): Boolean {
         menuInflater.inflate(R.menu.toolbar_menu, menu)
         return super.onCreateOptionsMenu(menu)
     }
-
 }
