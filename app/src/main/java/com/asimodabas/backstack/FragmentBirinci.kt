@@ -18,7 +18,6 @@ class FragmentBirinci : Fragment() {
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-
         val rootView = inflater.inflate(R.layout.fragmentbirinci, container, false)
 
         rootView.buttonTikla.setOnClickListener {

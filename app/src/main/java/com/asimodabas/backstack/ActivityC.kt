@@ -100,8 +100,8 @@ class ActivityC : AppCompatActivity() {
             }
             val fw = FileWriter(dosya)
             val yazici = BufferedWriter(fw)
-            yazici.write(editTextGirdi.text.toString())
 
+            yazici.write(editTextGirdi.text.toString())
             yazici.flush()
             yazici.close()
             fw.close()

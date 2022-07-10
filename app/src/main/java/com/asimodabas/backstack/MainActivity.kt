@@ -106,7 +106,6 @@ class MainActivity : AppCompatActivity() {
         //nestedCoroutine()
     }
 
-
     fun popup() {
         val popup = androidx.appcompat.widget.PopupMenu(this, buttonMenuAc)
         popup.menuInflater.inflate(R.menu.poppup_menu, popup.menu)

@@ -6,7 +6,6 @@ import kotlinx.coroutines.runBlocking
 import kotlinx.coroutines.withContext
 
 fun main() {
-
     runBlocking {
         launch(Dispatchers.Default) {
             println("Context: ${coroutineContext}")

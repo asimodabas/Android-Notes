@@ -43,7 +43,6 @@ class ActivityD : AppCompatActivity(), SearchView.OnQueryTextListener {
             if (kotlinDurum) {
                 x += "\n" + "Kotlin secildi."
             }
-
             textView8.text = x
         }
     }
@@ -62,7 +61,6 @@ class ActivityD : AppCompatActivity(), SearchView.OnQueryTextListener {
 
         return super.onCreateOptionsMenu(menu)
     }
-
 
     override fun onQueryTextChange(newText: String?): Boolean {
         if (newText != null) {
