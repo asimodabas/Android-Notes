@@ -11,6 +11,7 @@ import androidx.fragment.app.Fragment
 import kotlinx.android.synthetic.main.activity_navigation_drawer.*
 
 class NavigationDrawer : AppCompatActivity() {
+
     private lateinit var tempFragment: Fragment
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -22,9 +23,7 @@ class NavigationDrawer : AppCompatActivity() {
         val toggle = ActionBarDrawerToggle(this, drawer, toolbar2, 0, 0)
         drawer.addDrawerListener(toggle)
         toggle.syncState()
-
         supportFragmentManager.beginTransaction().add(R.id.fragment_tutucuu, fragmentBir()).commit()
-
         navigation_vieww.setNavigationItemSelectedListener { menuItem ->
 
             if (menuItem.itemId == R.id.nav_item_birinci) {
@@ -44,7 +43,6 @@ class NavigationDrawer : AppCompatActivity() {
 
             true
         }
-
     }
 
     override fun onBackPressed() {

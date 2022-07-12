@@ -10,50 +10,50 @@
 
     <Button
         android:id="@+id/goToC"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="52dp"
         android:text="goToC"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/buttonDur"
         app:layout_constraintHorizontal_bias="0.5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="52dp"
         app:layout_constraintStart_toEndOf="@+id/buttonBasla" />
 
     <TextView
         android:id="@+id/textViewAlınan"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="8dp"
         android:text="Veri"
         android:textSize="20sp"
         app:layout_constraintEnd_toEndOf="parent"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
         app:layout_constraintStart_toStartOf="parent" />
 
     <EditText
         android:id="@+id/editTextGirilen"
         style="@style/MaterialAlertDialog.MaterialComponents.Title.Text.CenterStacked"
+        android:hint="Veri Giriniz..."
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
         android:layout_width="wrap_content"
+        android:inputType="textPersonName"
         android:layout_height="wrap_content"
         android:layout_marginStart="113dp"
         android:layout_marginTop="36dp"
         android:layout_marginEnd="112dp"
         android:ems="10"
-        android:hint="Veri Giriniz..."
-        android:inputType="textPersonName"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textViewAlınan" />
 
     <VideoView
         android:id="@+id/videoView"
         android:layout_width="331dp"
-        android:layout_height="221dp"
-        android:layout_marginStart="40dp"
-        android:layout_marginTop="24dp"
         android:layout_marginEnd="40dp"
         app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="24dp"
         app:layout_constraintStart_toStartOf="parent"
+        android:layout_height="221dp"
+        android:layout_marginStart="40dp"
         app:layout_constraintTop_toBottomOf="@+id/editTextTextPersonName" />
 
     <Button

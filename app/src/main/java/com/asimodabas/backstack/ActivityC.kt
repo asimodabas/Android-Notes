@@ -19,7 +19,6 @@ class ActivityC : AppCompatActivity() {
 
         buttonAlert.setOnClickListener {
             val ad = AlertDialog.Builder(this)
-
             ad.setMessage("Menü seçenekleri açılacak")
             ad.setTitle("Menü Uyarısı")
             ad.setIcon(R.drawable.ic_baseline_warning_24)
@@ -37,19 +36,16 @@ class ActivityC : AppCompatActivity() {
         }
 
         switch1.setOnCheckedChangeListener { compoundButton, b ->
-
             if (b) {
                 Log.e("Switch Açık", "ON")
                 val girdi = b.toString()
                 textView6Durum.text = girdi.toString()
-
             } else {
                 val girdi = b.toString()
                 textView6Durum.text = girdi.toString()
                 Log.e("Switch Kapalı", "OFF")
             }
             toggleButton.setOnCheckedChangeListener { compoundButton, b ->
-
                 if (b) {
                     Log.e("ToggleButton Açık", "ON")
                     val girdi = b.toString()
@@ -76,7 +72,6 @@ class ActivityC : AppCompatActivity() {
             override fun onStopTrackingTouch(p0: SeekBar?) {
             }
         })
-
         buttonYaz.setOnClickListener {
             hariciYaz()
             //    dahiliYaz()
@@ -100,7 +95,6 @@ class ActivityC : AppCompatActivity() {
             }
             val fw = FileWriter(dosya)
             val yazici = BufferedWriter(fw)
-
             yazici.write(editTextGirdi.text.toString())
             yazici.flush()
             yazici.close()
@@ -137,7 +131,6 @@ class ActivityC : AppCompatActivity() {
     fun hariciSil() {
         val yol = applicationContext.getExternalFilesDir(null)?.absolutePath
         val dosya = File(yol, "dosyam.txt")
-
         dosya.delete()
     }
 

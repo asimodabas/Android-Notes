@@ -26,7 +26,6 @@ class ActivityB : AppCompatActivity() {
         buttonBasla.setOnClickListener {
 
             val adres = Uri.parse("Android.resource://" + packageName + "/" + R.raw.video)
-
             videoView.setVideoURI(adres)
             videoView.start()
         }

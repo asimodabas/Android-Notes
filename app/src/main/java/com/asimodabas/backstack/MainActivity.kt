@@ -55,7 +55,6 @@ class MainActivity : AppCompatActivity() {
         //WorkManager.getInstance(this).cancelAllWork()
 
         /*
-
         //Chaining
         val oneTimeRequest : OneTimeWorkRequest = OneTimeWorkRequestBuilder<RefreshDatabase>()
             .setConstraints(constraints)
@@ -65,7 +64,6 @@ class MainActivity : AppCompatActivity() {
             .then(oneTimeRequest)
             .then(oneTimeRequest)
             .enqueue()
-
          */
 
         val sp = getSharedPreferences("GirisSayici", Context.MODE_PRIVATE)
@@ -109,8 +107,6 @@ class MainActivity : AppCompatActivity() {
     fun popup() {
         val popup = androidx.appcompat.widget.PopupMenu(this, buttonMenuAc)
         popup.menuInflater.inflate(R.menu.poppup_menu, popup.menu)
-
-
         popup.setOnMenuItemClickListener { item ->
 
             when (item.itemId) {
