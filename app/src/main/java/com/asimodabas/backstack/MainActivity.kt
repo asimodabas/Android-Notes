@@ -7,10 +7,25 @@ import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.app.AppCompatDelegate
 import androidx.lifecycle.Observer
-import androidx.work.*
-import kotlinx.android.synthetic.main.activity_main.*
-import kotlinx.android.synthetic.main.fragmentbirinci.*
-import kotlinx.coroutines.*
+import androidx.work.Constraints
+import androidx.work.Data
+import androidx.work.PeriodicWorkRequestBuilder
+import androidx.work.WorkInfo
+import androidx.work.WorkManager
+import androidx.work.WorkRequest
+import kotlinx.android.synthetic.main.activity_main.buttonDark
+import kotlinx.android.synthetic.main.activity_main.buttonMenuAc
+import kotlinx.android.synthetic.main.activity_main.buttonNormal
+import kotlinx.android.synthetic.main.activity_main.fab
+import kotlinx.android.synthetic.main.activity_main.goToB
+import kotlinx.android.synthetic.main.activity_main.textsayac
+import kotlinx.coroutines.CoroutineScope
+import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.GlobalScope
+import kotlinx.coroutines.coroutineScope
+import kotlinx.coroutines.delay
+import kotlinx.coroutines.launch
+import kotlinx.coroutines.runBlocking
 import java.util.concurrent.TimeUnit
 
 class MainActivity : AppCompatActivity() {

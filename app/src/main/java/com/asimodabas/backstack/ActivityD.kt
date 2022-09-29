@@ -1,16 +1,18 @@
 package com.asimodabas.backstack
 
 import android.content.Intent
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
 import android.view.Menu
-import android.widget.Toast
-import androidx.appcompat.app.AlertDialog
+import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.widget.SearchView
-import kotlinx.android.synthetic.main.activity_c.*
-import kotlinx.android.synthetic.main.activity_d.*
-import kotlinx.android.synthetic.main.fragmentbirinci.*
+import kotlinx.android.synthetic.main.activity_d.buttonGotoE
+import kotlinx.android.synthetic.main.activity_d.buttonSecim
+import kotlinx.android.synthetic.main.activity_d.checkBoxJava
+import kotlinx.android.synthetic.main.activity_d.checkBoxKotlin
+import kotlinx.android.synthetic.main.activity_d.radioButtonBarcelona
+import kotlinx.android.synthetic.main.activity_d.radioButtonGalatasaray
+import kotlinx.android.synthetic.main.activity_d.textView8
 
 class ActivityD : AppCompatActivity(), SearchView.OnQueryTextListener {
     override fun onCreate(savedInstanceState: Bundle?) {

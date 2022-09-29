@@ -8,9 +8,24 @@ import android.widget.SeekBar
 import android.widget.Toast
 import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.app.AppCompatActivity
-import kotlinx.android.synthetic.main.activity_c.*
-import kotlinx.android.synthetic.main.activity_d.*
-import java.io.*
+import kotlinx.android.synthetic.main.activity_c.GoToD
+import kotlinx.android.synthetic.main.activity_c.buttonAlert
+import kotlinx.android.synthetic.main.activity_c.buttonOku
+import kotlinx.android.synthetic.main.activity_c.buttonSil
+import kotlinx.android.synthetic.main.activity_c.buttonYaz
+import kotlinx.android.synthetic.main.activity_c.editTextGirdi
+import kotlinx.android.synthetic.main.activity_c.slider
+import kotlinx.android.synthetic.main.activity_c.switch1
+import kotlinx.android.synthetic.main.activity_c.textView6Durum
+import kotlinx.android.synthetic.main.activity_c.textView9
+import kotlinx.android.synthetic.main.activity_c.toggleButton
+import java.io.BufferedReader
+import java.io.BufferedWriter
+import java.io.File
+import java.io.FileReader
+import java.io.FileWriter
+import java.io.InputStreamReader
+import java.io.OutputStreamWriter
 
 class ActivityC : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {

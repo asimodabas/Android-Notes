@@ -2,14 +2,17 @@ package com.asimodabas.backstack
 
 import android.content.Intent
 import android.net.Uri
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.Menu
 import android.view.MenuItem
 import android.widget.Toast
-import kotlinx.android.synthetic.main.activity_b.*
-import kotlinx.android.synthetic.main.activity_main.*
-import java.util.*
+import androidx.appcompat.app.AppCompatActivity
+import kotlinx.android.synthetic.main.activity_b.buttonBasla
+import kotlinx.android.synthetic.main.activity_b.buttonDur
+import kotlinx.android.synthetic.main.activity_b.editTextGirilen
+import kotlinx.android.synthetic.main.activity_b.goToC
+import kotlinx.android.synthetic.main.activity_b.textViewAlınan
+import kotlinx.android.synthetic.main.activity_b.videoView
 
 class ActivityB : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
