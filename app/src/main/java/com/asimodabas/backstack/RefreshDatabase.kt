@@ -1,7 +1,6 @@
 package com.asimodabas.backstack
 
 import android.content.Context
-import android.content.SharedPreferences
 import androidx.work.Worker
 import androidx.work.WorkerParameters
 

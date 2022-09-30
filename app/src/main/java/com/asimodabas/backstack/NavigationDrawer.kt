@@ -1,14 +1,15 @@
 package com.asimodabas.backstack
 
 import android.content.Intent
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.view.Gravity
 import android.widget.Toast
 import androidx.appcompat.app.ActionBarDrawerToggle
+import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.GravityCompat
 import androidx.fragment.app.Fragment
-import kotlinx.android.synthetic.main.activity_navigation_drawer.*
+import kotlinx.android.synthetic.main.activity_navigation_drawer.drawer
+import kotlinx.android.synthetic.main.activity_navigation_drawer.navigation_vieww
+import kotlinx.android.synthetic.main.activity_navigation_drawer.toolbar2
 
 class NavigationDrawer : AppCompatActivity() {
 

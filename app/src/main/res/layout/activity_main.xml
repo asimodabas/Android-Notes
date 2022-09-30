@@ -22,13 +22,13 @@
         android:id="@+id/goToB"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
         android:backgroundTint="@color/buttonRenk"
         android:text="gotob"
         android:textColor="#000000"
-        android:layout_marginBottom="16dp"
-        app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent" />
 
     <Button
@@ -49,11 +49,11 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginBottom="28dp"
+        android:backgroundTint="@color/buttonRenk"
         android:text="NORMAL MOD"
         android:textColor="#000000"
-        android:backgroundTint="@color/buttonRenk"
-        app:layout_constraintEnd_toStartOf="@+id/buttonDark"
         app:layout_constraintBottom_toTopOf="@+id/imageView"
+        app:layout_constraintEnd_toStartOf="@+id/buttonDark"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent" />
 
